@@ -14,6 +14,14 @@
 
 ---
 
+> [!CAUTION]
+> **Không sử dụng tài khoản chính của bạn.** Khuyến nghị nên sử dụng tài khoản phụ.
+
+> [!IMPORTANT]
+> **“Hai năm không mất phí” là mục tiêu mà dự án đề ra, không phải kết quả đã được xác thực.** Việc truy cập miễn phí, các quyền lợi và chi phí thực tế sẽ phụ thuộc vào hệ thống thanh toán của Google cũng như các yếu tố từ phía nhà cung cấp dịch vụ. Hãy kiểm tra kỹ số tiền trước khi xác nhận đăng ký.
+
+---
+
 ## ⚙️ 1. HƯỚNG DẪN BẬT QUYỀN ROOT VÀ GỠ LỖI ADB (BẮT BUỘC)
 
 Để công cụ có thể tự động kết nối và nạp script vào Google Play Store, giả lập Android của bạn **bắt buộc phải bật Quyền ROOT và Gỡ lỗi ADB**.
@@ -85,13 +93,6 @@ Sau khi chạy lệnh, chương trình sẽ tự động thực hiện:
    * **Kết quả**: Bạn được dùng trọn vẹn 2 năm Google AI Pro (5 TB) mà **hoàn toàn không bao giờ bị trừ tiền** sau khi hết hạn!
 5. **Tự động xóa sạch file**:
    * Chương trình tự động giải phóng và xóa hoàn toàn file trên máy tính sau khi chạy xong, giữ cho máy tính luôn sạch sẽ và bảo mật tối đa.
-
----
-
-## ⚠️ LƯU Ý QUAN TRỌNG
-
-> [!IMPORTANT]
-> **Quy tắc an toàn**: Ở mỗi bước thanh toán trên màn hình giả lập, **CHỈ bấm Đăng ký khi số tiền ghi rõ là 0đ hoặc $0.00**. Nếu màn hình hiện giá tiền khác 0đ, hãy đóng bảng thanh toán và không bấm tiếp.
 
 ---
 
