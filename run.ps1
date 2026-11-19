@@ -1,8 +1,3 @@
-﻿# ================================================================================
-#  GOOGLE AI PRO (5 TB) - ALL-IN-ONE ONE-LINER LAUNCHER (irm | iex)
-#  Usage: irm https://raw.githubusercontent.com/dat1799/DTrix-GG-Pro-Helper-Releases/main/run.ps1 | iex
-# ================================================================================
-
 $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $Host.UI.RawUI.WindowTitle = "DTrix - Google AI Pro (5 TB) Auto 24 Months"
