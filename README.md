@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ DTrix - Google AI Pro (5 TB) 24 Months All-In-One Helper
+# ⚡ DTrix - Google AI Pro (5 TB) 24 Months
 ### (Official Public Release Distribution)
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg)](https://microsoft.com/windows)
