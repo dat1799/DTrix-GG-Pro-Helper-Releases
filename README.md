@@ -36,27 +36,6 @@
 
 ---
 
-### 🔹 Cách bật trên các giả lập khác:
-<details>
-<summary><b>Nhấp vào đây để xem hướng dẫn cho NoxPlayer, MuMu Player, BlueStacks</b></summary>
-
-* **NoxPlayer**:
-  1. Nhấp vào biểu tượng ⚙️ (Cài đặt) ở góc trên bên phải.
-  2. Chọn tab **Cài đặt chung (General settings)** $\rightarrow$ Tích chọn vào ô **Bật quyền ROOT (Root)**.
-  3. Bấm **Lưu thay đổi** và khởi động lại giả lập.
-* **MuMu Player 12**:
-  1. Nhấp vào biểu tượng Menu (☰) hoặc ⚙️ (Cài đặt).
-  2. Vào mục **Cài đặt khác** hoặc **Root** $\rightarrow$ Gạt sang **Bật Quyền Root**.
-  3. Vào mục **Cơ bản** $\rightarrow$ Bật **Gỡ lỗi ADB**.
-  4. Lưu và khởi động lại giả lập.
-* **BlueStacks 5**:
-  1. Vào **Cài đặt (⚙️)** $\rightarrow$ Chọn tab **Nâng cao (Advanced)**.
-  2. Bật mục **Android Debug Bridge (ADB)** $\rightarrow$ Lưu thay đổi.
-
-</details>
-
----
-
 ## 🚀 2. HƯỚNG DẪN CHẠY 1 LỆNH DUY NHẤT (ALL-IN-ONE)
 
 Bạn **không cần cài đặt Python**, **không cần Node.js** và **không cần thao tác kỹ thuật phức tạp**.
