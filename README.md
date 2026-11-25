@@ -26,7 +26,7 @@
 
 Để công cụ có thể tự động kết nối và nạp script vào Google Play Store, giả lập Android của bạn **bắt buộc phải bật Quyền ROOT và Gỡ lỗi ADB**.
 
-### 🔹 Cách bật trên LDPlayer 9 (Khuyên dùng nhất - Đơn giản nhất):
+### 🔹 Cách bật trên LDPlayer 9 và MuMuPlayer (Khuyên dùng nhất - Đơn giản nhất):
 1. Mở LDPlayer $\rightarrow$ Nhìn sang thanh công cụ bên phải, nhấp vào biểu tượng **Cài đặt** (hình bánh răng ⚙️).
 2. Nhấp vào tab **Khác (Other settings)** ở danh sách bên trái.
 3. Thiết lập 2 mục sau:
