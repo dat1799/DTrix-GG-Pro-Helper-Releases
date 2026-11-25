@@ -83,6 +83,16 @@ Nếu bạn không muốn chạy qua lệnh `irm`:
 
 ---
 
+## ⚖️ TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM (DISCLAIMER)
+
+* **Mục đích nghiên cứu & học tập**: Dự án và công cụ này được phát triển hoàn toàn vì mục đích học tập, nghiên cứu kỹ thuật tự động hóa (Automation) và thử nghiệm kiểm thử giao diện. Dự án không khuyến khích hay cổ súy bất kỳ hành vi lạm dụng hay gian lận nào.
+* **Không liên kết với Google**: Công cụ này là một dự án độc lập của bên thứ ba, hoàn toàn **không liên kết, không được tài trợ, ủy thác hoặc xác nhận bởi Google LLC** hay bất kỳ công ty con nào của Google. Mọi nhãn hiệu, tên dịch vụ (Google, Google One, Google AI Pro, Google Play, Android...) đều thuộc quyền sở hữu của các chủ sở hữu tương ứng.
+* **Chính sách từ nhà cung cấp dịch vụ**: Các gói ưu đãi dùng thử, quyền lợi và thời hạn khuyến mãi thuộc toàn quyền quản lý của Google và có thể thay đổi, điều chỉnh hoặc kết thúc bất cứ lúc nào theo quyết định của nhà cung cấp. Tác giả không đưa ra bất kỳ cam kết hay bảo đảm nào về tính khả dụng của ưu đãi trên mọi tài khoản hoặc khu vực địa lý.
+* **Trách nhiệm của người dùng**: Người sử dụng tự chịu hoàn toàn trách nhiệm đối với các thao tác được thực hiện trên tài khoản của mình. **Luôn kiểm tra kỹ số tiền hiển thị trên màn hình Google Play (đảm bảo là 0đ / $0.00) trước khi bấm xác nhận đăng ký.** Tác giả không chịu trách nhiệm đối với bất kỳ khiếu nại, phí phát sinh ngoài ý muốn, tranh chấp hoặc vấn đề liên quan đến tài khoản cá nhân do việc sử dụng công cụ gây ra.
+* **Cung cấp theo điều khoản "Nguyên trạng" (AS-IS)**: Phần mềm được cung cấp trên cơ sở nguyên trạng (AS-IS), không có bất kỳ sự bảo đảm nào, dù rõ ràng hay ngụ ý, về tính ổn định hay khả năng phù hợp cho một mục đích cụ thể.
+
+---
+
 <div align="center">
   <b>DTrix Helper System</b> • Phát hành chính thức bởi DTrix
 </div>
