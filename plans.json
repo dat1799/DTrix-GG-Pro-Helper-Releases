@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-26",
+  "products": [
+    "g1.2tb.ai.subs_variant",
+    "g1.2tb.ai.18months_eft",
+    "g1.2tb.ai.15months_eft",
+    "g1.2tb.ai.12months_eft",
+    "g1.2tb.ai.6months_eft",
+    "g1.2tb.ai.4months_eft",
+    "g1.2tb.ai.3months_eft",
+    "g1.2tb.ai.2months_eft",
+    "g1.play.2tb.ai",
+    "g1.play.2tb.ai.student"
+  ],
+  "plan_offers": {
+    "pro18": ["g1.2tb.ai.18months_eft", "eft-18months"],
+    "pro15": ["g1.2tb.ai.15months_eft", "eft-15months"],
+    "pro12": ["", "12months-eft"],
+    "pro12_fb": ["", "eft-12months"],
+    "pro12_student": ["g1.play.2tb.ai.student", "eft-12mo"],
+    "pro6": ["", "6months-eft"],
+    "pro6_fb": ["", "eft-6months"],
+    "pro6b": ["", "6months-eft-2"],
+    "pro6c": ["", "6months-eft-ss-2026"],
+    "pro4": ["g1.2tb.ai.4months_eft", "eft-4months"],
+    "pro3": ["g1.2tb.ai.3months_eft", "eft-3months"],
+    "pro3_fb": ["g1.play.2tb.ai", "eft-3mo"],
+    "pro2": ["g1.2tb.ai.2months_eft", "eft-2months"]
+  },
+  "step1_chain": [
+    "pro18",
+    "pro15",
+    "pro12",
+    "pro12_fb",
+    "pro12_student",
+    "pro6",
+    "pro6_fb"
+  ],
+  "stack_steps": {
+    "step2": { "plan": "pro6", "fallbacks": ["pro6_fb"], "min_days": 450 },
+    "step3": { "plan": "pro6b", "fallbacks": ["pro6_fb"], "min_days": 650 },
+    "step4": { "plan": "pro6c", "fallbacks": [], "max_days": 780 }
+  },
+  "db_sku_patterns": ["g1.2tb.ai", "g1.play.2tb.ai"]
+}
