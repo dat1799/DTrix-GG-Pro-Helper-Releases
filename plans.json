@@ -26,8 +26,19 @@
     "pro4": ["g1.2tb.ai.4months_eft", "eft-4months"],
     "pro3": ["g1.2tb.ai.3months_eft", "eft-3months"],
     "pro3_fb": ["g1.play.2tb.ai", "eft-3mo"],
-    "pro2": ["g1.2tb.ai.2months_eft", "eft-2months"]
+    "pro2": ["g1.2tb.ai.2months_eft", "eft-2months"],
+    "ultra_auto": ["", ""]
   },
+  "ultra_products": [
+    "g1.ai.ultra.subs_variant",
+    "g1.ai.ultra.1month_eft",
+    "g1.ai.ultra.3months_eft",
+    "g1.ai.ultra.1month_eft.acq",
+    "g1.30tb.ai.subs_variant",
+    "g1.30tb.ai",
+    "g1.20tb.v2",
+    "g1.play.20tb"
+  ],
   "step1_chain": [
     "pro18",
     "pro15",
@@ -61,5 +72,12 @@
     "step3": { "plan": "pro6b", "fallbacks": ["pro6_fb"], "min_days": 650 },
     "step4": { "plan": "pro6c", "fallbacks": [], "max_days": 780 }
   },
-  "db_sku_patterns": ["g1.2tb.ai", "g1.play.2tb.ai"]
+  "db_sku_patterns": [
+    "g1.2tb.ai",
+    "g1.play.2tb.ai",
+    "g1.ai.ultra",
+    "g1.30tb.ai",
+    "g1.20tb",
+    "g1.play.20tb"
+  ]
 }
