@@ -35,7 +35,26 @@
     "pro12_fb",
     "pro12_student",
     "pro6",
-    "pro6_fb"
+    "pro6_fb",
+    "pro4",
+    "pro3",
+    "pro3_fb",
+    "pro2"
+  ],
+  "stack_chain": [
+    "pro18",
+    "pro15",
+    "pro12",
+    "pro12_fb",
+    "pro12_student",
+    "pro6",
+    "pro6_fb",
+    "pro6b",
+    "pro6c",
+    "pro4",
+    "pro3",
+    "pro3_fb",
+    "pro2"
   ],
   "stack_steps": {
     "step2": { "plan": "pro6", "fallbacks": ["pro6_fb"], "min_days": 450 },
