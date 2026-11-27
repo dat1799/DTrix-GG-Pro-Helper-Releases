@@ -1,12 +1,12 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Tls13
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$Host.UI.RawUI.WindowTitle = "DTrix - Google AI Pro (5 TB) Auto 24 Months"
+$Host.UI.RawUI.WindowTitle = "DTrix - Google AI Pro / Ultra Helper"
 
 Write-Host ""
 Write-Host "==========================================================================" -ForegroundColor Cyan
-Write-Host "   DTRIX - GOOGLE AI PRO (5 TB) - TỰ ĐỘNG NHẬN 24 THÁNG TRỌN GÓI ($0.00)" -ForegroundColor Green
+Write-Host "   DTRIX - GOOGLE AI PRO (5 TB) / ULTRA (20/30 TB) - TỰ ĐỘNG ($0.00)" -ForegroundColor Green
 Write-Host "==========================================================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -17,22 +17,59 @@ if (-not (Test-Path $AppDir)) {
 
 $ExePath = Join-Path $AppDir "DTrix-Helper.exe"
 
-# Đường dẫn tải DTrix-Helper.exe chính thức từ kho Public Releases
-$RawUrl = "https://raw.githubusercontent.com/dat1799/DTrix-GG-Pro-Helper-Releases/main/DTrix-Helper.exe"
+$CacheBuster = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
+$RawUrl = "https://raw.githubusercontent.com/dat1799/DTrix-GG-Pro-Helper-Releases/main/DTrix-Helper.exe?t=$CacheBuster"
 $ReleaseUrl = "https://github.com/dat1799/DTrix-GG-Pro-Helper-Releases/releases/download/v1.0.0/DTrix-Helper.exe"
 
-Write-Host "▶ Đang khởi động hệ thống, vui lòng chờ trong giây lát..." -ForegroundColor Yellow
+function Download-HelperFile {
+    param([string]$Url, [string]$OutPath)
+    $req = [System.Net.HttpWebRequest]::Create($Url)
+    $req.Timeout = 180000
+    $req.ReadWriteTimeout = 30000
+    $req.UserAgent = "DTrix-Helper-Launcher"
+    $resp = $req.GetResponse()
+    try {
+        $total = $resp.ContentLength
+        $inStream = $resp.GetResponseStream()
+        $outStream = [System.IO.File]::Create($OutPath)
+        try {
+            $buf = New-Object byte[] 65536
+            $readTotal = 0L
+            $lastPct = -1
+            while (($n = $inStream.Read($buf, 0, $buf.Length)) -gt 0) {
+                $outStream.Write($buf, 0, $n)
+                $readTotal += $n
+                if ($total -gt 0) {
+                    $pct = [int][Math]::Floor(($readTotal * 100.0) / $total)
+                    if ($pct -ne $lastPct) {
+                        $lastPct = $pct
+                        Write-Host -NoNewline ("`r▶ Đang khởi động hệ thống, vui lòng chờ trong giây lát... {0,3}%   " -f $pct) -ForegroundColor Yellow
+                    }
+                }
+            }
+            Write-Host ""
+        } finally {
+            $outStream.Dispose()
+            $inStream.Dispose()
+        }
+    } finally {
+        $resp.Dispose()
+    }
+}
+
+Write-Host -NoNewline "▶ Đang khởi động hệ thống, vui lòng chờ trong giây lát..." -ForegroundColor Yellow
 
 $downloaded = $false
 try {
-    Invoke-WebRequest -Uri $RawUrl -OutFile $ExePath -UseBasicParsing
+    Download-HelperFile -Url $RawUrl -OutPath $ExePath
     $downloaded = $true
 } catch {
+    Write-Host "`n⚠️  Kết nối chính chậm hoặc gián đoạn, đang thử đường truyền dự phòng..." -ForegroundColor Yellow
     try {
-        Invoke-WebRequest -Uri $ReleaseUrl -OutFile $ExePath -UseBasicParsing
+        Download-HelperFile -Url $ReleaseUrl -OutPath $ExePath
         $downloaded = $true
     } catch {
-        Write-Host "❌ Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng!" -ForegroundColor Red
+        Write-Host "❌ Không thể kết nối hoặc tải xuống bị quá thời gian: $($_.Exception.Message)" -ForegroundColor Red
         return
     }
 }
@@ -42,6 +79,7 @@ if (-not (Test-Path $ExePath) -or (Get-Item $ExePath).Length -lt 10MB) {
     return
 }
 
+Write-Host "▶ Đang khởi chạy..." -ForegroundColor Green
 try {
     & $ExePath
 } finally {
