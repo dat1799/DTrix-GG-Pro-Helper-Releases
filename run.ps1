@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Tls13
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -6,7 +6,7 @@ $Host.UI.RawUI.WindowTitle = "DTrix - Google AI Pro / Ultra Helper"
 
 Write-Host ""
 Write-Host "==========================================================================" -ForegroundColor Cyan
-Write-Host "   DTRIX - GOOGLE AI PRO (5 TB) / ULTRA (20/30 TB) - TỰ ĐỘNG ($0.00)" -ForegroundColor Green
+Write-Host "   DTRIX - GOOGLE AI PRO (5 TB) / ULTRA (20/30 TB) - TỰ ĐỘNG (`$0.00)" -ForegroundColor Green
 Write-Host "==========================================================================" -ForegroundColor Cyan
 Write-Host ""
 
