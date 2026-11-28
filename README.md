@@ -26,13 +26,21 @@
 
 Để công cụ có thể tự động kết nối và nạp script vào Google Play Store, giả lập Android của bạn **bắt buộc phải bật Quyền ROOT và Gỡ lỗi ADB**.
 
-### 🔹 Cách bật trên LDPlayer 9 và MuMuPlayer (Khuyên dùng nhất - Đơn giản nhất):
+### 🔹 Cách bật trên LDPlayer 9:
 1. Mở LDPlayer $\rightarrow$ Nhìn sang thanh công cụ bên phải, nhấp vào biểu tượng **Cài đặt** (hình bánh răng ⚙️).
 2. Nhấp vào tab **Khác (Other settings)** ở danh sách bên trái.
 3. Thiết lập 2 mục sau:
    * **Cho phép Root (Root permission)**: Chuyển sang **Bật (Enable)**.
    * **Gỡ lỗi ADB (ADB debug)**: Chọn **Mở kết nối cục bộ (Open local connection)** hoặc **Mở (Enable)**.
 4. Bấm nút **Lưu cài đặt (Save settings)** ở góc dưới $\rightarrow$ Bấm **Khởi động lại ngay (Restart now)** để áp dụng thay đổi.
+
+### 🔹 Cách bật trên MuMu Player 12:
+1. Mở **Device Settings** (Cài đặt thiết bị / biểu tượng bánh răng ⚙️).
+2. Nhấp vào tab **Developer options** (Tùy chọn nhà phát triển) ở danh sách bên trái.
+3. Thiết lập 2 mục sau:
+   * **Enable root**: Chuyển sang **On** (Bật).
+   * **ADB debug**: Chọn **Enable local connection** (Mở kết nối cục bộ).
+4. Bấm **Lưu / Khởi động lại (Restart)** giả lập nếu được yêu cầu để áp dụng thay đổi.
 
 ---
 
