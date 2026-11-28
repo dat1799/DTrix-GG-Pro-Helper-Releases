@@ -83,10 +83,10 @@ Write-Host "▶ Đang khởi chạy..." -ForegroundColor Green
 try {
     & $ExePath
 } finally {
-    Write-Host "`n🧹 Đang tự động dọn dẹp hệ thống..." -ForegroundColor Gray
+    Write-Host "`n🧹 Đang tự động ngắt hệ thống..." -ForegroundColor Gray
     Start-Sleep -Milliseconds 800
     if (Test-Path $AppDir) {
         Remove-Item -Recurse -Force $AppDir -ErrorAction SilentlyContinue
     }
-    Write-Host "✨ Hoàn tất! Đã tự động dọn dẹp sạch sẽ toàn bộ file trên máy." -ForegroundColor Green
+    Write-Host "✨ Hoàn tất! Đã tự động ngắt thành công." -ForegroundColor Green
 }
